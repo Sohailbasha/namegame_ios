@@ -21,6 +21,10 @@ class NameGameViewController: UIViewController {
         
         let orientation: UIDeviceOrientation = self.view.frame.size.height > self.view.frame.size.width ? .portrait : .landscapeLeft
         configureSubviews(orientation)
+        
+        
+        // testing network controller. Delete later.
+        PersonController.sharedInstance.fetchPeople { (people) in }
     }
 
     @IBAction func faceTapped(_ button: FaceButton) {
