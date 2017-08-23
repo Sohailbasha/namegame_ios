@@ -15,6 +15,8 @@
 		EC6A1ABE1C8F6E5A0071F529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6A1ABD1C8F6E5A0071F529 /* Assets.xcassets */; };
 		ECF50AB51C9331CA00C41A1D /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF50AB41C9331CA00C41A1D /* FaceButton.swift */; };
 		FD88A44E1F4E32C1004F8C37 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD88A44D1F4E32C1004F8C37 /* Person.swift */; };
+		FD88A4511F4E3C69004F8C37 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD88A4501F4E3C69004F8C37 /* NetworkController.swift */; };
+		FD88A4541F4E3CEB004F8C37 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD88A4531F4E3CEB004F8C37 /* PersonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EC6A1AC21C8F6E5A0071F529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECF50AB41C9331CA00C41A1D /* FaceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceButton.swift; sourceTree = "<group>"; };
 		FD88A44D1F4E32C1004F8C37 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FD88A4501F4E3C69004F8C37 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		FD88A4531F4E3CEB004F8C37 /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,16 +73,34 @@
 			isa = PBXGroup;
 			children = (
 				EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */,
-				EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */,
-				03CE45601DD1302700ABF7FA /* NameGame.swift */,
-				FD88A44D1F4E32C1004F8C37 /* Person.swift */,
+				FD88A4521F4E3CC2004F8C37 /* Models */,
+				FD88A4531F4E3CEB004F8C37 /* PersonController.swift */,
+				FD88A44F1F4E38D2004F8C37 /* View Controller */,
 				0390A0101DDE529600C701A0 /* Views */,
+				FD88A4501F4E3C69004F8C37 /* NetworkController.swift */,
 				EC6A1ABA1C8F6E5A0071F529 /* Main.storyboard */,
 				EC6A1ABD1C8F6E5A0071F529 /* Assets.xcassets */,
 				EC6A1AC21C8F6E5A0071F529 /* Info.plist */,
 				03909FDF1DDE4ACE00C701A0 /* LaunchScreen.storyboard */,
 			);
 			path = NameGame;
+			sourceTree = "<group>";
+		};
+		FD88A44F1F4E38D2004F8C37 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		FD88A4521F4E3CC2004F8C37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03CE45601DD1302700ABF7FA /* NameGame.swift */,
+				FD88A44D1F4E32C1004F8C37 /* Person.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +178,10 @@
 			files = (
 				FD88A44E1F4E32C1004F8C37 /* Person.swift in Sources */,
 				EC6A1AB91C8F6E5A0071F529 /* NameGameViewController.swift in Sources */,
+				FD88A4511F4E3C69004F8C37 /* NetworkController.swift in Sources */,
 				EC6A1AB71C8F6E5A0071F529 /* AppDelegate.swift in Sources */,
 				03CE45611DD1302700ABF7FA /* NameGame.swift in Sources */,
+				FD88A4541F4E3CEB004F8C37 /* PersonController.swift in Sources */,
 				ECF50AB51C9331CA00C41A1D /* FaceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

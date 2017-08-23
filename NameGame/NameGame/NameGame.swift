@@ -20,6 +20,6 @@ class NameGame {
 
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
-
+        
     }
 }
