@@ -14,6 +14,8 @@ struct Person {
     private static let lastNameKey = "lastName"
     private static let imageURLKey = "url"
     
+    private static let headshotKey = "headshot"
+    
     let firstName: String
     let lastName: String
     let imageURL: String
@@ -26,10 +28,16 @@ struct Person {
     
     
     
+    
     init?(dictionary: [String:Any]) {
+//        guard let firstName = dictionary[Person.firstNameKey] as? String,
+//            let lastName = dictionary[Person.lastNameKey] as? String,
+//            let imageURL = dictionary[Person.imageURLKey] as? String else { return nil }
         guard let firstName = dictionary[Person.firstNameKey] as? String,
             let lastName = dictionary[Person.lastNameKey] as? String,
-            let imageURL = dictionary[Person.imageURLKey] as? String else { return nil }
+            let headshotsDictionary = dictionary[Person.headshotKey] as? [String:Any],
+            let imageURL = headshotsDictionary[Person.imageURLKey] as? String else { return nil }
+        
         
         
         self.firstName = firstName

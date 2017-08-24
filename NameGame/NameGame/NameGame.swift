@@ -9,6 +9,7 @@
 import Foundation
 
 protocol NameGameDelegate: class {
+    // use delegate to get value from loadGameData?
 }
 
 class NameGame {
@@ -20,6 +21,8 @@ class NameGame {
 
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
-        
+        PersonController.sharedInstance.fetchPeople { (people) in
+            
+        }
     }
 }

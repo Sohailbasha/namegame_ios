@@ -24,7 +24,9 @@ class NameGameViewController: UIViewController {
         
         
         // testing network controller. Delete later.
-        PersonController.sharedInstance.fetchPeople { (people) in }
+        PersonController.sharedInstance.fetchPeople { (people) in
+            
+        }
     }
 
     @IBAction func faceTapped(_ button: FaceButton) {

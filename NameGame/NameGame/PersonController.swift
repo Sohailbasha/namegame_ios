@@ -14,14 +14,13 @@ class PersonController {
     
     let url = URL(string: "https://willowtreeapps.com/api/v1.0/profiles/")
     
-    func fetchPeople(completion: @escaping (_ people: [Person]) -> Void) {
+    func fetchPeople(completion: @escaping (_ people: [Person]?) -> Void) {
         guard let url = self.url else { fatalError("URL optional is nil.")}
-        
         NetworkController.performRequest(for: url, httpMethod: .get) { (data, error) in
             if let error = error {
                 print("unable to perform request: \(error)")
             }
-        
+            
             guard let data = data else {
                 completion([])
                 return
@@ -37,9 +36,11 @@ class PersonController {
                 return
             }
             
-            print(jsonDictionary)
+            let people = jsonDictionary.flatMap { Person(dictionary: $0) }
+            completion(people)
         }
-        
     }
+    
+    
     
 }
