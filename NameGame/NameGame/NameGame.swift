@@ -22,7 +22,13 @@ class NameGame {
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
         PersonController.sharedInstance.fetchPeople { (people) in
+            guard let people = people else { return }
+            var gameArray: [Person] = []
             
+            while gameArray.count < self.numberPeople {
+                let randomNumber = Int(arc4random_uniform(20))
+                gameArray.append(people[randomNumber])
+            }
         }
     }
 }
